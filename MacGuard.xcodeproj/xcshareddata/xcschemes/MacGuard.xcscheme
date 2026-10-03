@@ -16,8 +16,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "F5DE39D82F4AD817005DE734"
-               BuildableName = "MacGuard.bundle"
-               BlueprintName = "MacGuard"
+               BuildableName = "MacGuardMechanism.bundle"
+               BlueprintName = "MacGuardMechanism"
                ReferencedContainer = "container:MacGuard.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -51,8 +51,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "F5DE39D82F4AD817005DE734"
-            BuildableName = "MacGuard.bundle"
-            BlueprintName = "MacGuard"
+            BuildableName = "MacGuardMechanism.bundle"
+            BlueprintName = "MacGuardMechanism"
             ReferencedContainer = "container:MacGuard.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

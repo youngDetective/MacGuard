@@ -11,14 +11,6 @@
 		F53A21042F7016EC004987EC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F53A21032F7016EC004987EC /* GoogleSignIn */; };
 		F53A21062F701776004987EC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F53A21052F701776004987EC /* GoogleSignInSwift */; };
 		F53A21202F757604004987EC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = F53A211F2F757604004987EC /* FirebaseCore */; };
-		F59D108C2FE7976100988C8F /* TargetDocumentation.md in Resources */ = {isa = PBXBuildFile; fileRef = F59D108B2FE7976100988C8F /* TargetDocumentation.md */; };
-		F5A08BD02F4B376F003585E2 /* OTPView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A08BCF2F4B376F003585E2 /* OTPView.swift */; };
-		F5A2458E2F4B209E00AD004F /* TotpVerifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5A2458C2F4B209E00AD004F /* TotpVerifier.swift */; };
-		F5A2458F2F4B209E00AD004F /* TotpVerifier.xib in Resources */ = {isa = PBXBuildFile; fileRef = F5A2458D2F4B209E00AD004F /* TotpVerifier.xib */; };
-		F5D452242F9C855F0042A45A /* TOTPDoc in Resources */ = {isa = PBXBuildFile; fileRef = F5D452232F9C855F0042A45A /* TOTPDoc */; };
-		F5DE39E22F4AD8AE005DE734 /* MacGuardAD.m in Sources */ = {isa = PBXBuildFile; fileRef = F5DE39E12F4AD8AE005DE734 /* MacGuardAD.m */; };
-		F5DE39E52F4AD981005DE734 /* MacGuardMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE39E42F4AD981005DE734 /* MacGuardMechanism.swift */; };
-		F5DE39E82F4ADE68005DE734 /* TOTPVerifierMechanism.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DE39E72F4ADE68005DE734 /* TOTPVerifierMechanism.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,20 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F53A20C02F6A1E80004987EC /* TotpVerifier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TotpVerifier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F53A20C02F6A1E80004987EC /* MacGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A20D02F6A1E81004987EC /* totpVerifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = totpVerifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A20DA2F6A1E81004987EC /* totpVerifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = totpVerifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		F59D108B2FE7976100988C8F /* TargetDocumentation.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = TargetDocumentation.md; sourceTree = "<group>"; };
-		F5A08BCF2F4B376F003585E2 /* OTPView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPView.swift; sourceTree = "<group>"; };
-		F5A2458C2F4B209E00AD004F /* TotpVerifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotpVerifier.swift; sourceTree = "<group>"; };
-		F5A2458D2F4B209E00AD004F /* TotpVerifier.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TotpVerifier.xib; sourceTree = "<group>"; };
-		F5D452232F9C855F0042A45A /* TOTPDoc */ = {isa = PBXFileReference; lastKnownFileType = text; path = TOTPDoc; sourceTree = "<group>"; };
-		F5DE39D92F4AD817005DE734 /* MacGuard.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacGuard.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		F5DE39E02F4AD8AE005DE734 /* MacGuardAD.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MacGuardAD.h; sourceTree = "<group>"; };
-		F5DE39E12F4AD8AE005DE734 /* MacGuardAD.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MacGuardAD.m; sourceTree = "<group>"; };
+		F5DE39D92F4AD817005DE734 /* MacGuardMechanism.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MacGuardMechanism.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5DE39E32F4AD981005DE734 /* MacGuard-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MacGuard-Bridging-Header.h"; sourceTree = "<group>"; };
-		F5DE39E42F4AD981005DE734 /* MacGuardMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacGuardMechanism.swift; sourceTree = "<group>"; };
-		F5DE39E72F4ADE68005DE734 /* TOTPVerifierMechanism.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPVerifierMechanism.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -62,19 +45,20 @@
 				Model/LocalUserMapper.swift,
 				Utility/ODRecordMapper.swift,
 			);
-			target = F5DE39D82F4AD817005DE734 /* MacGuard */;
+			target = F5DE39D82F4AD817005DE734 /* MacGuardMechanism */;
 		};
 		F53A20F42F6A2712004987EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
 			);
-			target = F53A20BF2F6A1E80004987EC /* TotpVerifier */;
+			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F53A20C12F6A1E80004987EC /* totpVerifier */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F52458443062109000DE15CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53A20F42F6A2712004987EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = totpVerifier; sourceTree = "<group>"; };
+		F52458A33070C25B00DE15CA /* MacGuardMechanism */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MacGuardMechanism; sourceTree = "<group>"; };
+		F53A20C12F6A1E80004987EC /* MacGuard */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F52458443062109000DE15CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53A20F42F6A2712004987EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MacGuard; sourceTree = "<group>"; };
 		F53A20D32F6A1E81004987EC /* totpVerifierTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = totpVerifierTests; sourceTree = "<group>"; };
 		F53A20DD2F6A1E81004987EC /* totpVerifierUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = totpVerifierUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -125,49 +109,33 @@
 		F5DE39D02F4AD817005DE734 = {
 			isa = PBXGroup;
 			children = (
-				F5D452232F9C855F0042A45A /* TOTPDoc */,
-				F5A08BCF2F4B376F003585E2 /* OTPView.swift */,
-				F5A2458C2F4B209E00AD004F /* TotpVerifier.swift */,
-				F5A2458D2F4B209E00AD004F /* TotpVerifier.xib */,
-				F5DE39E62F4AD9A6005DE734 /* Mechanism */,
-				F5DE39E02F4AD8AE005DE734 /* MacGuardAD.h */,
-				F5DE39E12F4AD8AE005DE734 /* MacGuardAD.m */,
-				F53A20C12F6A1E80004987EC /* totpVerifier */,
+				F52458A33070C25B00DE15CA /* MacGuardMechanism */,
+				F53A20C12F6A1E80004987EC /* MacGuard */,
 				F53A20D32F6A1E81004987EC /* totpVerifierTests */,
 				F53A20DD2F6A1E81004987EC /* totpVerifierUITests */,
 				F5DE39DA2F4AD817005DE734 /* Products */,
 				F5DE39E32F4AD981005DE734 /* MacGuard-Bridging-Header.h */,
 				F53A20F02F6A20B9004987EC /* Frameworks */,
-				F59D108B2FE7976100988C8F /* TargetDocumentation.md */,
 			);
 			sourceTree = "<group>";
 		};
 		F5DE39DA2F4AD817005DE734 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F5DE39D92F4AD817005DE734 /* MacGuard.bundle */,
-				F53A20C02F6A1E80004987EC /* TotpVerifier.app */,
+				F5DE39D92F4AD817005DE734 /* MacGuardMechanism.bundle */,
+				F53A20C02F6A1E80004987EC /* MacGuard.app */,
 				F53A20D02F6A1E81004987EC /* totpVerifierTests.xctest */,
 				F53A20DA2F6A1E81004987EC /* totpVerifierUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F5DE39E62F4AD9A6005DE734 /* Mechanism */ = {
-			isa = PBXGroup;
-			children = (
-				F5DE39E42F4AD981005DE734 /* MacGuardMechanism.swift */,
-				F5DE39E72F4ADE68005DE734 /* TOTPVerifierMechanism.swift */,
-			);
-			path = Mechanism;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F53A20BF2F6A1E80004987EC /* TotpVerifier */ = {
+		F53A20BF2F6A1E80004987EC /* MacGuard */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "TotpVerifier" */;
+			buildConfigurationList = F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "MacGuard" */;
 			buildPhases = (
 				F53A20BC2F6A1E80004987EC /* Sources */,
 				F53A20BD2F6A1E80004987EC /* Frameworks */,
@@ -178,9 +146,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F53A20C12F6A1E80004987EC /* totpVerifier */,
+				F53A20C12F6A1E80004987EC /* MacGuard */,
 			);
-			name = TotpVerifier;
+			name = MacGuard;
 			packageProductDependencies = (
 				F53A20F12F6A20B9004987EC /* FirebaseAuth */,
 				F53A21032F7016EC004987EC /* GoogleSignIn */,
@@ -188,7 +156,7 @@
 				F53A211F2F757604004987EC /* FirebaseCore */,
 			);
 			productName = totpVerifier;
-			productReference = F53A20C02F6A1E80004987EC /* TotpVerifier.app */;
+			productReference = F53A20C02F6A1E80004987EC /* MacGuard.app */;
 			productType = "com.apple.product-type.application";
 		};
 		F53A20CF2F6A1E81004987EC /* totpVerifierTests */ = {
@@ -237,9 +205,9 @@
 			productReference = F53A20DA2F6A1E81004987EC /* totpVerifierUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
-		F5DE39D82F4AD817005DE734 /* MacGuard */ = {
+		F5DE39D82F4AD817005DE734 /* MacGuardMechanism */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F5DE39DD2F4AD817005DE734 /* Build configuration list for PBXNativeTarget "MacGuard" */;
+			buildConfigurationList = F5DE39DD2F4AD817005DE734 /* Build configuration list for PBXNativeTarget "MacGuardMechanism" */;
 			buildPhases = (
 				F5DE39D52F4AD817005DE734 /* Sources */,
 				F5DE39D62F4AD817005DE734 /* Frameworks */,
@@ -249,11 +217,14 @@
 			);
 			dependencies = (
 			);
-			name = MacGuard;
+			fileSystemSynchronizedGroups = (
+				F52458A33070C25B00DE15CA /* MacGuardMechanism */,
+			);
+			name = MacGuardMechanism;
 			packageProductDependencies = (
 			);
 			productName = MacGuard;
-			productReference = F5DE39D92F4AD817005DE734 /* MacGuard.bundle */;
+			productReference = F5DE39D92F4AD817005DE734 /* MacGuardMechanism.bundle */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -301,8 +272,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F5DE39D82F4AD817005DE734 /* MacGuard */,
-				F53A20BF2F6A1E80004987EC /* TotpVerifier */,
+				F5DE39D82F4AD817005DE734 /* MacGuardMechanism */,
+				F53A20BF2F6A1E80004987EC /* MacGuard */,
 				F53A20CF2F6A1E81004987EC /* totpVerifierTests */,
 				F53A20D92F6A1E81004987EC /* totpVerifierUITests */,
 			);
@@ -335,9 +306,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5D452242F9C855F0042A45A /* TOTPDoc in Resources */,
-				F59D108C2FE7976100988C8F /* TargetDocumentation.md in Resources */,
-				F5A2458F2F4B209E00AD004F /* TotpVerifier.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -369,11 +337,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F5A2458E2F4B209E00AD004F /* TotpVerifier.swift in Sources */,
-				F5A08BD02F4B376F003585E2 /* OTPView.swift in Sources */,
-				F5DE39E82F4ADE68005DE734 /* TOTPVerifierMechanism.swift in Sources */,
-				F5DE39E22F4AD8AE005DE734 /* MacGuardAD.m in Sources */,
-				F5DE39E52F4AD981005DE734 /* MacGuardMechanism.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,12 +345,12 @@
 /* Begin PBXTargetDependency section */
 		F53A20D22F6A1E81004987EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F53A20BF2F6A1E80004987EC /* TotpVerifier */;
+			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
 			targetProxy = F53A20D12F6A1E81004987EC /* PBXContainerItemProxy */;
 		};
 		F53A20DC2F6A1E81004987EC /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F53A20BF2F6A1E80004987EC /* TotpVerifier */;
+			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
 			targetProxy = F53A20DB2F6A1E81004987EC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -701,7 +664,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "TotpVerifier" */ = {
+		F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "MacGuard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F53A20E22F6A1E81004987EC /* Debug */,
@@ -737,7 +700,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F5DE39DD2F4AD817005DE734 /* Build configuration list for PBXNativeTarget "MacGuard" */ = {
+		F5DE39DD2F4AD817005DE734 /* Build configuration list for PBXNativeTarget "MacGuardMechanism" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F5DE39DE2F4AD817005DE734 /* Debug */,
