@@ -10,7 +10,7 @@
 	<true/>
 	<key>keychain-access-groups</key>
 	<array>
-		<string>$(AppIdentifierPrefix)com.sample.totpVerifier</string>
+		<string>$(AppIdentifierPrefix)com.petasos.macGuard</string>
 	</array>
 </dict>
 </plist>

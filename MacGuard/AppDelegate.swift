@@ -15,6 +15,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         FirebaseApp.configure()
+        do {
+           try DaemonServiceManager.register()
+        } catch {
+            print(error)
+        }
         // Insert code here to initialize your application
     }
 
