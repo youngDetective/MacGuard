@@ -12,12 +12,9 @@ import GoogleSignIn
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
-    override init() {
-        FirebaseApp.configure()
-    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
- 
+        FirebaseApp.configure()
         // Insert code here to initialize your application
     }
 
