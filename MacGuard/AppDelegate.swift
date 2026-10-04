@@ -17,7 +17,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         FirebaseApp.configure()
         do {
            try DaemonServiceManager.register()
-           XPCClientManager.shared.connect()
+           XPCUIClientManager.shared.connect()
         } catch {
             print(error)
         }
