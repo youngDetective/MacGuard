@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 70;
+	objectVersion = 73;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -30,7 +30,29 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		F5245A223070C8AB00DE15CA /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		F53CDFB73070CCE80005D60F /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LaunchDaemons;
+			dstSubfolderSpec = 1;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		F5245A243070C8AB00DE15CA /* MacGuardHelper */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MacGuardHelper; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A20C02F6A1E80004987EC /* MacGuard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacGuard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A20D02F6A1E81004987EC /* totpVerifierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = totpVerifierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F53A20DA2F6A1E81004987EC /* totpVerifierUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = totpVerifierUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -43,6 +65,7 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Model/LocalUserMapper.swift,
+				Utility/DaemonServiceManager.swift,
 				Utility/ODRecordMapper.swift,
 			);
 			target = F5DE39D82F4AD817005DE734 /* MacGuardMechanism */;
@@ -51,19 +74,43 @@
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
+				"View Controllers/com.petasos.MacGuard.daemon.plist",
 			);
 			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
 		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
+/* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+		F53CDFB93070CCF70005D60F /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet;
+			attributesByRelativePath = {
+				"View Controllers/com.petasos.MacGuard.daemon.plist" = (
+					CodeSignOnCopy,
+				);
+			};
+			buildPhase = F53CDFB73070CCE80005D60F /* CopyFiles */;
+			membershipExceptions = (
+				"View Controllers/com.petasos.MacGuard.daemon.plist",
+			);
+		};
+/* End PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F52458A33070C25B00DE15CA /* MacGuardMechanism */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MacGuardMechanism; sourceTree = "<group>"; };
-		F53A20C12F6A1E80004987EC /* MacGuard */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F52458443062109000DE15CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53A20F42F6A2712004987EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MacGuard; sourceTree = "<group>"; };
+		F5245A253070C8AB00DE15CA /* MacGuardHelper */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MacGuardHelper; sourceTree = "<group>"; };
+		F53A20C12F6A1E80004987EC /* MacGuard */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F52458443062109000DE15CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53A20F42F6A2712004987EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53CDFB93070CCF70005D60F /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MacGuard; sourceTree = "<group>"; };
 		F53A20D32F6A1E81004987EC /* totpVerifierTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = totpVerifierTests; sourceTree = "<group>"; };
 		F53A20DD2F6A1E81004987EC /* totpVerifierUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = totpVerifierUITests; sourceTree = "<group>"; };
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		F5245A213070C8AB00DE15CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F53A20BD2F6A1E80004987EC /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,6 +160,7 @@
 				F53A20C12F6A1E80004987EC /* MacGuard */,
 				F53A20D32F6A1E81004987EC /* totpVerifierTests */,
 				F53A20DD2F6A1E81004987EC /* totpVerifierUITests */,
+				F5245A253070C8AB00DE15CA /* MacGuardHelper */,
 				F5DE39DA2F4AD817005DE734 /* Products */,
 				F5DE39E32F4AD981005DE734 /* MacGuard-Bridging-Header.h */,
 				F53A20F02F6A20B9004987EC /* Frameworks */,
@@ -126,6 +174,7 @@
 				F53A20C02F6A1E80004987EC /* MacGuard.app */,
 				F53A20D02F6A1E81004987EC /* totpVerifierTests.xctest */,
 				F53A20DA2F6A1E81004987EC /* totpVerifierUITests.xctest */,
+				F5245A243070C8AB00DE15CA /* MacGuardHelper */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -133,11 +182,34 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		F5245A233070C8AB00DE15CA /* MacGuardHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F5245A2A3070C8AB00DE15CA /* Build configuration list for PBXNativeTarget "MacGuardHelper" */;
+			buildPhases = (
+				F5245A203070C8AB00DE15CA /* Sources */,
+				F5245A213070C8AB00DE15CA /* Frameworks */,
+				F5245A223070C8AB00DE15CA /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F5245A253070C8AB00DE15CA /* MacGuardHelper */,
+			);
+			name = MacGuardHelper;
+			packageProductDependencies = (
+			);
+			productName = MacGuardHelper;
+			productReference = F5245A243070C8AB00DE15CA /* MacGuardHelper */;
+			productType = "com.apple.product-type.tool";
+		};
 		F53A20BF2F6A1E80004987EC /* MacGuard */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "MacGuard" */;
 			buildPhases = (
 				F53A20BC2F6A1E80004987EC /* Sources */,
+				F53CDFB73070CCE80005D60F /* CopyFiles */,
 				F53A20BD2F6A1E80004987EC /* Frameworks */,
 				F53A20BE2F6A1E80004987EC /* Resources */,
 			);
@@ -234,9 +306,12 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1640;
+				LastSwiftUpdateCheck = 2650;
 				LastUpgradeCheck = 1640;
 				TargetAttributes = {
+					F5245A233070C8AB00DE15CA = {
+						CreatedOnToolsVersion = 26.5;
+					};
 					F53A20BF2F6A1E80004987EC = {
 						CreatedOnToolsVersion = 16.4;
 					};
@@ -255,7 +330,6 @@
 				};
 			};
 			buildConfigurationList = F5DE39D42F4AD817005DE734 /* Build configuration list for PBXProject "MacGuard" */;
-			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -268,6 +342,7 @@
 				F53A20ED2F6A1F7C004987EC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				F53A21022F7016E3004987EC /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */,
 			);
+			preferredProjectObjectVersion = 54;
 			productRefGroup = F5DE39DA2F4AD817005DE734 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -276,6 +351,7 @@
 				F53A20BF2F6A1E80004987EC /* MacGuard */,
 				F53A20CF2F6A1E81004987EC /* totpVerifierTests */,
 				F53A20D92F6A1E81004987EC /* totpVerifierUITests */,
+				F5245A233070C8AB00DE15CA /* MacGuardHelper */,
 			);
 		};
 /* End PBXProject section */
@@ -312,6 +388,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		F5245A203070C8AB00DE15CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		F53A20BC2F6A1E80004987EC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -356,20 +439,64 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		F5245A283070C8AB00DE15CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S28CR8HSTU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.macGuardHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F5245A293070C8AB00DE15CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = S28CR8HSTU;
+				ENABLE_HARDENED_RUNTIME = YES;
+				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.macGuardHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		F53A20E22F6A1E81004987EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = totpVerifier/totpVerifier.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT/MacGuard/macGuard.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S28CR8HSTU;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = totpVerifier/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MacGuard/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -378,7 +505,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.totpVerifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.macGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
@@ -393,15 +520,26 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = totpVerifier/totpVerifier.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT/MacGuard/macGuard.entitlements";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S28CR8HSTU;
+				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = totpVerifier/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/MacGuard/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainStoryboardFile = Main;
 				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
@@ -410,7 +548,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sample.totpVerifier;
+				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.macGuard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -664,6 +802,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		F5245A2A3070C8AB00DE15CA /* Build configuration list for PBXNativeTarget "MacGuardHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F5245A283070C8AB00DE15CA /* Debug */,
+				F5245A293070C8AB00DE15CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "MacGuard" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
