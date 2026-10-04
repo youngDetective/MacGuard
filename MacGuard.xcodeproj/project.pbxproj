@@ -11,6 +11,7 @@
 		F53A21042F7016EC004987EC /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = F53A21032F7016EC004987EC /* GoogleSignIn */; };
 		F53A21062F701776004987EC /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = F53A21052F701776004987EC /* GoogleSignInSwift */; };
 		F53A21202F757604004987EC /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = F53A211F2F757604004987EC /* FirebaseCore */; };
+		F5B5AB3A3070E12E00DDDBEA /* MacGuardHelper in Resources */ = {isa = PBXBuildFile; fileRef = F5245A243070C8AB00DE15CA /* MacGuardHelper */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,18 +29,16 @@
 			remoteGlobalIDString = F53A20BF2F6A1E80004987EC;
 			remoteInfo = totpVerifier;
 		};
+		F5B069A63070DA3800BAA6B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F5DE39D12F4AD817005DE734 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F5245A233070C8AB00DE15CA;
+			remoteInfo = MacGuardHelper;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		F5245A223070C8AB00DE15CA /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
 		F53CDFB73070CCE80005D60F /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,6 +77,13 @@
 			);
 			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
 		};
+		F5B5ADDD307296D100DDDBEA /* PBXFileSystemSynchronizedBuildFileExceptionSet */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				"Services/XPC Service/OptionalClient.swift",
+			);
+			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
+		};
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet section */
@@ -97,7 +103,7 @@
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F52458A33070C25B00DE15CA /* MacGuardMechanism */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MacGuardMechanism; sourceTree = "<group>"; };
-		F5245A253070C8AB00DE15CA /* MacGuardHelper */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = MacGuardHelper; sourceTree = "<group>"; };
+		F5245A253070C8AB00DE15CA /* MacGuardHelper */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F5B5ADDD307296D100DDDBEA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MacGuardHelper; sourceTree = "<group>"; };
 		F53A20C12F6A1E80004987EC /* MacGuard */ = {isa = PBXFileSystemSynchronizedRootGroup; exceptions = (F52458443062109000DE15CA /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53A20F42F6A2712004987EC /* PBXFileSystemSynchronizedBuildFileExceptionSet */, F53CDFB93070CCF70005D60F /* PBXFileSystemSynchronizedGroupBuildPhaseMembershipExceptionSet */, ); explicitFileTypes = {}; explicitFolders = (); path = MacGuard; sourceTree = "<group>"; };
 		F53A20D32F6A1E81004987EC /* totpVerifierTests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = totpVerifierTests; sourceTree = "<group>"; };
 		F53A20DD2F6A1E81004987EC /* totpVerifierUITests */ = {isa = PBXFileSystemSynchronizedRootGroup; explicitFileTypes = {}; explicitFolders = (); path = totpVerifierUITests; sourceTree = "<group>"; };
@@ -188,7 +194,6 @@
 			buildPhases = (
 				F5245A203070C8AB00DE15CA /* Sources */,
 				F5245A213070C8AB00DE15CA /* Frameworks */,
-				F5245A223070C8AB00DE15CA /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -209,13 +214,14 @@
 			buildConfigurationList = F53A20E82F6A1E81004987EC /* Build configuration list for PBXNativeTarget "MacGuard" */;
 			buildPhases = (
 				F53A20BC2F6A1E80004987EC /* Sources */,
-				F53CDFB73070CCE80005D60F /* CopyFiles */,
 				F53A20BD2F6A1E80004987EC /* Frameworks */,
 				F53A20BE2F6A1E80004987EC /* Resources */,
+				F53CDFB73070CCE80005D60F /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F5B069A73070DA3800BAA6B3 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F53A20C12F6A1E80004987EC /* MacGuard */,
@@ -361,6 +367,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5B5AB3A3070E12E00DDDBEA /* MacGuardHelper in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +443,11 @@
 			target = F53A20BF2F6A1E80004987EC /* MacGuard */;
 			targetProxy = F53A20DB2F6A1E81004987EC /* PBXContainerItemProxy */;
 		};
+		F5B069A73070DA3800BAA6B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F5245A233070C8AB00DE15CA /* MacGuardHelper */;
+			targetProxy = F5B069A63070DA3800BAA6B3 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -444,9 +456,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S28CR8HSTU;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.macGuardHelper;
+				PRODUCT_MODULE_NAME = MacGuardHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
@@ -461,9 +475,11 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = S28CR8HSTU;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
-				MACOSX_DEPLOYMENT_TARGET = 26.5;
+				MACOSX_DEPLOYMENT_TARGET = 15.6;
 				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.macGuardHelper;
+				PRODUCT_MODULE_NAME = MacGuardHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_APPROACHABLE_CONCURRENCY = YES;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -483,7 +499,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S28CR8HSTU;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
@@ -526,7 +542,7 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S28CR8HSTU;
-				ENABLE_APP_SANDBOX = YES;
+				ENABLE_APP_SANDBOX = NO;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
 				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
@@ -766,6 +782,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.MacGuard;
+				PRODUCT_MODULE_NAME = MacGuardMechanism;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -790,6 +807,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.petasos.MacGuard;
+				PRODUCT_MODULE_NAME = MacGuardMechanism;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
