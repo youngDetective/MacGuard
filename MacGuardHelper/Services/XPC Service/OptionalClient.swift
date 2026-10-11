@@ -8,6 +8,7 @@
 import Foundation
 @objc protocol XPCUIListner: NSObjectProtocol {
     func ping()
+    func updateCloudUser(cloudUserID: String, username: String) async -> Bool
 }
 
 @objc protocol XPCUIClientProtocol: NSObjectProtocol {

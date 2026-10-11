@@ -28,4 +28,15 @@ class XPCUIClientManager: XPCClientManager {
         }
         proxy.ping()
     }
+    
+    func updateCloudUser(cloudUserID: String) async -> Bool {
+        guard let proxy = getProxy() else {
+            print("Fetching proxy failed")
+            return false
+        }
+        return await proxy.updateCloudUser(
+            cloudUserID: cloudUserID,
+            username: NSUserName()
+        )
+    }
 }

@@ -13,12 +13,13 @@ class LocalUser {
         infoKey: "linkedAccountId"
     )
     
-    func updateCloudUser(cloudUserID: String) throws {
-        try ODRecordMapper.setRecordAttribute(
-            recordName: NSUserName(),
-            infoKey: "linkedAccountId",
-            value: cloudUserID
-        )
-        cloudUser = cloudUserID
+    func updateCloudUser(cloudUserID: String) async -> Bool {
+        if await XPCUIClientManager.shared.updateCloudUser(
+            cloudUserID: cloudUserID
+        ) {
+            cloudUser = cloudUserID
+            return true
+        }
+        return false
     }
 }

@@ -47,9 +47,11 @@ class DashboardVC: NSViewController {
     
     @IBAction func localAccountLinkerBtnAction(_ sender: NSButton) {
         guard let userInfo else { return }
-        DispatchQueue(label: "com.totp.localuser.update").async {
-            
-            try? self.localUser.updateCloudUser(cloudUserID: userInfo.uid)
+        Task {
+            let isUserRecordUpdated = await self.localUser.updateCloudUser(
+                cloudUserID: userInfo.uid
+            )
+            guard isUserRecordUpdated else { return }
             DispatchQueue.main.async {
                 if self.localUser.cloudUser != nil {
                     self.accountLinkerBox.isHidden = true
