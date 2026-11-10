@@ -8,9 +8,8 @@
 import Foundation
 
 class XPCClientManager: NSObject, XPCUIClientProtocol {
-    static let shared = XPCClientManager()
     
-    private let xpcConnection = NSXPCConnection(machServiceName: "com.petasos.macGuard", options: .privileged)
+    let xpcConnection = NSXPCConnection(machServiceName: "com.petasos.macGuard", options: .privileged)
     
     func connect() {
         xpcConnection.invalidationHandler = {
@@ -21,24 +20,12 @@ class XPCClientManager: NSObject, XPCUIClientProtocol {
         xpcConnection.interruptionHandler = {
             print("⚠️ XPC Connection Interrupted: The daemon killed the connection or crashed.")
         }
-        let daemonInterface = NSXPCInterface(with: XPCUIListner.self)
-        xpcConnection.remoteObjectInterface = daemonInterface
+        setInterface(for: xpcConnection)
         xpcConnection.resume()
         ping()
     }
     
-    func getProxy() -> XPCUIListner? {
-        return xpcConnection.remoteObjectProxyWithErrorHandler { error in
-            print("🔴")
-        } as? XPCUIListner
-    }
+    func ping() {}
     
-    func ping() {
-        guard let proxy = getProxy() else {
-            print("Pinging Failed")
-            return
-        }
-        proxy.ping()
-    }
-    
+    func setInterface(for xpcConnection: NSXPCConnection) {}
 }

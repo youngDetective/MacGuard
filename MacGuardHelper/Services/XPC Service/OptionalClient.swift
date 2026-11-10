@@ -12,3 +12,7 @@ import Foundation
 
 @objc protocol XPCUIClientProtocol: NSObjectProtocol {
 }
+
+@objc protocol XPCMechanismListner: NSObjectProtocol {
+    func ping()
+}
