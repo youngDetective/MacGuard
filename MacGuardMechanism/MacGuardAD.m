@@ -8,7 +8,7 @@
 #import <Foundation/Foundation.h>
 
 #import "MacGuardAD.h"
-#import "MacGuard-Swift.h"
+#import "MacGuardMechanism-Swift.h"
 
 MacGuardAD *authorizationPlugin = nil;
 os_log_t pluginLog = nil;

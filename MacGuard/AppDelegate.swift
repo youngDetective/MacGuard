@@ -12,9 +12,19 @@ import GoogleSignIn
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
+    override init() {
+        FirebaseApp.configure()
+        super.init()
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        FirebaseApp.configure()
+        
+        do {
+           try DaemonServiceManager.register()
+           XPCUIClientManager.shared.connect()
+        } catch {
+            print(error)
+        }
         // Insert code here to initialize your application
     }
 
@@ -26,6 +36,23 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return true
     }
 
+    func codeSigningInfo(forPID pid: pid_t) -> [String: Any]? {
+        var attributes: [CFString: Any] = [
+            kSecGuestAttributePid: NSNumber(value: pid)
+        ]
+        var code: SecCode?
+        let status = SecCodeCopyGuestWithAttributes(nil, attributes as CFDictionary, [], &code)
+        guard status == errSecSuccess, let code = code else { return nil }
 
+        var signingInfo: CFDictionary?
+        var staticCode: SecStaticCode?
+            
+            // Call the Security framework function
+            let codeSwapperStatus = SecCodeCopyStaticCode(code, SecCSFlags(rawValue: 0), &staticCode)
+        let infoStatus = SecCodeCopySigningInformation(staticCode!, SecCSFlags(), &signingInfo)
+        guard infoStatus == errSecSuccess, let info = signingInfo as? [String: Any] else { return nil }
+        
+        return info
+    }
 }
 
