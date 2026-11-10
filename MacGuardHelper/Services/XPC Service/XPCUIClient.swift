@@ -27,4 +27,17 @@ identifier "com.petasos.macGuard" and anchor apple generic and certificate leaf[
     func ping() {
         print("New XPC connection has been setup")
     }
+    
+    func updateCloudUser(cloudUserID: String, username: String) async -> Bool {
+        do {
+            try ODRecordMapper.setRecordAttribute(
+                recordName: username,
+                infoKey: "linkedAccountId",
+                value: cloudUserID
+            )
+            return true
+        } catch {
+            return false
+        }
+    }
 }

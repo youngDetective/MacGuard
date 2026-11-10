@@ -12,9 +12,13 @@ import GoogleSignIn
 
 @main
 class AppDelegate: NSObject, NSApplicationDelegate {
+    override init() {
+        FirebaseApp.configure()
+        super.init()
+    }
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        FirebaseApp.configure()
+        
         do {
            try DaemonServiceManager.register()
            XPCUIClientManager.shared.connect()
